@@ -1,0 +1,16 @@
+.nav-letf{
+  background-color: white;
+  box-shadow: 5px 5px 5px gray;
+}
+.nav-letf h3{
+  padding-bottom: 50px;
+}
+.container-list a{
+  text-decoration: none;
+}
+.container-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}

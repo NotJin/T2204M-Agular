@@ -1,13 +1,15 @@
-<section class="section">
+<section class="section main">
     <div class="container">
+      <form [formGroup]="exform">
       <div class="container-form">
         <h2>Login</h2>
         <div class="line"></div>
-        <input required type="text" placeholder="User Name..">
+        <input formControlName="name" type="text" placeholder="User Name..">
         <input required type="Password" placeholder="Password..">
         <a class="decrip" href="#">Forgot Password?</a>
-        <button type="button">Login</button>
+        <button>Login</button>
         <p>Not a member?<a routerLink="/user-signup">Signup</a></p>
       </div>
+      </form>
     </div>
 </section>

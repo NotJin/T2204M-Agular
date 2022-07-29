@@ -12,12 +12,18 @@ import {RouterModule, Routes} from "@angular/router";
 import {AboutusComponent} from "./aboutus/aboutus.component";
 import {UserloginComponent} from "./user/userlogin.coponent";
 import {UsersignupComponent} from "./user/usersignup.component";
+import {CategoryComponent} from "./category/category.component";
+import {SpecicalComponent} from "./category/specical.component";
+import {MatButtonModule} from "@angular/material/button";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ReactiveFormsModule} from "@angular/forms";
 
 const appRoutes: Routes = [
   {path: '', component: CurrentweatherComponent},
   {path: 'about-us', component: AboutusComponent},
   {path: 'user-login', component: UserloginComponent},
-  {path: 'user-signup', component: UsersignupComponent}
+  {path: 'user-signup', component: UsersignupComponent},
+  {path: 'specical', component: SpecicalComponent}
 ];
 @NgModule({
   declarations: [
@@ -28,12 +34,16 @@ const appRoutes: Routes = [
     CurentWeatherforecastComponent,
     AboutusComponent,
     UserloginComponent,
-    UsersignupComponent
+    UsersignupComponent,
+    CategoryComponent,
+    SpecicalComponent
+
   ],
   imports: [
-    BrowserModule,FormsModule,
+    BrowserModule, FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes), MatButtonModule, BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

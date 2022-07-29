@@ -1,0 +1,9 @@
+<div class="row container" *ngIf="food">
+  <div class="col-3 container-item" *ngFor="let f of food.data">
+    <div [id]="f.id">
+      <img src="{{f.image}}">
+      <p>{{f.name}}</p>
+      <p>{{f.price}} vnd</p>
+    </div>
+  </div>
+</div>

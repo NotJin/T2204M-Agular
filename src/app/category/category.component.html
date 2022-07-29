@@ -1,0 +1,31 @@
+<section>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 nav-letf">
+          <h3>Super<b>Food</b></h3>
+          <ul class="navbar-nav" *ngIf="data2">
+            <div class="container-list" *ngFor="let m of data2.data;">
+                <div>
+                  <li class="nav-item"><a [id]="m.id" routerLink="/specical">{{m.name}}</a></li>
+                </div>
+                <div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </div>
+          </ul>
+        </div>
+
+        <div class="col-9 content">
+          <div class="row container" *ngIf="category">
+            <div class="col-3 container-item" *ngFor="let f of category.data">
+              <img src="{{f.image}}">
+              <p>{{f.name}}</p>
+              <p>{{f.price}} vnd</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
