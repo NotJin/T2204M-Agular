@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {FormGroup} from "@angular/forms";
+import {FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-user',
@@ -8,11 +8,11 @@ import {FormGroup} from "@angular/forms";
 
 export class UserloginComponent implements OnInit{
 
-  exform: FormGroup;
+  myGroup!: FormGroup;
 
   ngOnInit() {
-    this.exform = new  FormGroup({
-      'name': new FormGroup(null, )
+    this.myGroup = new  FormGroup({
+      'name': new FormGroup(null, Validators.required)
     })
   }
 }
